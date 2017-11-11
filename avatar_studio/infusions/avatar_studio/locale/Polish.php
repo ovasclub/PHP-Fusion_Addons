@@ -1,0 +1,18 @@
+<?php
+$locale['ast_title'] = "Avatar Studio";
+$locale['ast_description'] = "UÅ¼ytkownicy mogÄ& wybraÄ! awatar z galerii - Avatar Studio.";
+$locale['ast_link'] = "Avatar Studio";
+$locale['ast_001'] = "Galeria AwatarÃ³w";
+$locale['ast_002'] = "Awatary";
+$locale['ast_003'] = "Kategoria:";
+$locale['ast_004'] = "Awatar pomyÅ:lnie zapisany!";
+$locale['ast_005'] = "Zweryfikuj swÃ³j wybÃ³r w profilu";
+$locale['ast_006'] = "Zapisz Awatar";
+$locale['ast_007'] = "4";
+$locale['ast_008'] = "Wybierz";
+$locale['ast_009'] = "Brak obrazka";
+$locale['ast_010'] = "Brak awatarÃ³w";
+$locale['ast_011'] = "Poczekaj - ";
+$locale['ast_012'] = " - zaraz powrÃ³cisz do profilu";
+$locale['ast_013'] = "BÅÄ&d";
+?>
