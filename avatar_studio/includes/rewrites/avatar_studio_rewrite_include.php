@@ -5,8 +5,8 @@
 | https://www.php-fusion.co.uk/
 +--------------------------------------------------------+
 | File Category: Core Rewrite Modules
-| Filename: shoutbox_rewrite_include.php
-| Author: slb4life
+| Filename: avatar_studio_rewrite_include.php
+| Author: karrak
 +--------------------------------------------------------+
 | This program is released as free software under the
 | Affero GPL license. You can redistribute it and/or
@@ -20,6 +20,6 @@ if (!defined("IN_FUSION")) {
     die("Access Denied");
 }
 
-$pattern = array(
+$pattern = [
     "avatar-studio" => "infusions/avatar_studio/avatar_studio.php",
-);
+];

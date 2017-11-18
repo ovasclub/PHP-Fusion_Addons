@@ -9,10 +9,11 @@ $locale['ast_004'] = "Avatar Baþarý Ýle Kaydedildi !";
 $locale['ast_005'] = "Profilden Seçiminizi Doðrulayýn";
 $locale['ast_006'] = "Avatarý Kaydet";
 $locale['ast_007'] = "4";
-$locale['ast_008'] = "Kategori";
+$locale['ast_008'] = "Error copying";
 $locale['ast_009'] = "Resim yok";
 $locale['ast_010'] = "Avatar yok";
-$locale['ast_011'] = "veya ";
-$locale['ast_012'] = " bekleyerek profilinize yönlendirieleceksiniz";
+$locale['ast_011'] = "veya %s bekleyerek profilinize yönlendirieleceksiniz";
+$locale['ast_012'] = "Avatar not selected";
 $locale['ast_013'] = "HATA";
-?>
+//$locale['ast_014'] = "Max méret: %s / %ux%u pixel";
+$locale['ast_015'] = "Failed to upload avatar.";

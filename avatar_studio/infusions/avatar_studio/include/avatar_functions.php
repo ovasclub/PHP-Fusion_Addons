@@ -35,26 +35,39 @@ function saveAvatar() {
             }
 
             $ext = strrchr($avatar_path, '.');
-            copy($avatar_path, IMAGES.'avatars/avatar['.$userdata['user_id'].']'.$ext);
-            dbquery("UPDATE ".DB_USERS." SET user_avatar='avatar[".$userdata['user_id']."]".$ext."' WHERE user_id='".$userdata['user_id']."' LIMIT 1");
 
-            $output .= "<div class='well text-center m-b-20'>";
-            $output .= $locale['ast_004'].'<br /><br />';
-            $output .= '<a href="'.BASEDIR.'edit_profile.php">'.$locale['ast_005'].'</a><br /><br />';
-            $output .= "<font color='#990000'><font size='2'>".sprintf($locale['ast_011'], $userdata['user_name'])."</font>
+            if(@copy($avatar_path, IMAGES.'avatars/avatar['.$userdata['user_id'].']'.$ext)){
+
+                $bind = [
+                    ':avatar' => "avatar[".$userdata['user_id']."]".$ext."",
+                    ':userId' => $userdata['user_id']
+                ];
+
+                dbquery("UPDATE ".DB_USERS." SET user_avatar=:avatar WHERE user_id=:userId LIMIT 1", $bind);
+
+                $output .= "<div class='well text-center m-b-20'>";
+                $output .= $locale['ast_004'].'<br /><br />';
+                $output .= "<a href='".BASEDIR."edit_profile.php'><button type='button' class='btn btn-link'>".$locale['ast_005']."</button></a><br /><br />";
+                $output .= "<span style='color:#990000'><big>".sprintf($locale['ast_011'], $userdata['user_name'])."</big></span>
                         <br /><br /><img src='".INFUSIONS."avatar_studio/img/loading.gif' alt='' /><br /><br />";
-            $output .= "<script type=\"text/javascript\"><!--
+                $output .= '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+                    <meta http-equiv="Pragma" content="no-cache" />
+                    <meta http-equiv="Expires" content="0" />';
+                $output .= "<script type=\"text/javascript\"><!--
                         setTimeout('Redirect()',5000);
                         function Redirect()
                         {
                         window.location.href = '".BASEDIR."profile.php?lookup=".$userdata['user_id']."';
                           }
                         // --></script>";
-            $output .= "</div>\n";
+                $output .= "</div>\n";
+            } else {                $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_015']."</div>\n";
+            }
 
         } else {
-            $output .= "<div class='danger text-center m-b-20'>".$locale['ast_013']."</div>\n";
+            $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_013']."</div>\n";
         }
-    }
+    } else {        $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_012']."</div>\n";
+    }
     return $output;
 }

@@ -9,10 +9,11 @@ $locale['ast_004'] = "Awatar pomyÅ:lnie zapisany!";
 $locale['ast_005'] = "Zweryfikuj swÃ³j wybÃ³r w profilu";
 $locale['ast_006'] = "Zapisz Awatar";
 $locale['ast_007'] = "4";
-$locale['ast_008'] = "Wybierz";
+$locale['ast_008'] = "Error copying";
 $locale['ast_009'] = "Brak obrazka";
 $locale['ast_010'] = "Brak awatarÃ³w";
-$locale['ast_011'] = "Poczekaj - ";
-$locale['ast_012'] = " - zaraz powrÃ³cisz do profilu";
+$locale['ast_011'] = "Poczekaj - %s - zaraz powrÃ³cisz do profilu";
+$locale['ast_012'] = "Avatar not selected";
 $locale['ast_013'] = "BÅÄ&d";
-?>
+//$locale['ast_014'] = "Max méret: %s / %ux%u pixel";
+$locale['ast_015'] = "Failed to upload avatar.";

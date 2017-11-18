@@ -9,10 +9,11 @@ $locale['ast_004'] = "Avatar er gemt!";
 $locale['ast_005'] = "Gå tilbage til redigere profil";
 $locale['ast_006'] = "Gem Avatar";
 $locale['ast_007'] = "4";
-$locale['ast_008'] = "Skift Kategori";
+$locale['ast_008'] = "Error copying";
 $locale['ast_009'] = "Ingen billeder";
 $locale['ast_010'] = "Ingen avatars";
-$locale['ast_011'] = "Eller vent ";
-$locale['ast_012'] = " og du bliver automatisk sendt til din profil";
+$locale['ast_011'] = "Eller vent %s og du bliver automatisk sendt til din profil";
+$locale['ast_012'] = "Avatar not selected";
 $locale['ast_013'] = "Fejl i avatar valg";
-?>
+//$locale['ast_014'] = "Max méret: %s / %ux%u pixel";
+$locale['ast_015'] = "Failed to upload avatar.";

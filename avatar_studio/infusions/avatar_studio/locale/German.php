@@ -9,10 +9,11 @@ $locale['ast_004'] = "Avatar erfolgreich gespeichert!";
 $locale['ast_005'] = "Überprüfen Sie Ihre Auswahl im Profil";
 $locale['ast_006'] = "Speichern Avatar";
 $locale['ast_007'] = "4";
-$locale['ast_008'] = "Category";
+$locale['ast_008'] = "Error copying";
 $locale['ast_009'] = "No images";
 $locale['ast_010'] = "No avatars";
-$locale['ast_011'] = "Or wait ";
-$locale['ast_012'] = " and you will return to your profile";
+$locale['ast_011'] = "Or wait %s and you will return to your profile";
+$locale['ast_012'] = "Avatar not selected";
 $locale['ast_013'] = "ERROR";
-?>
+//$locale['ast_014'] = "Max méret: %s / %ux%u pixel";
+$locale['ast_015'] = "Failed to upload avatar.";
