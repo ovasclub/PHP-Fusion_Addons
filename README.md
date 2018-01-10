@@ -7,6 +7,7 @@
 
 <p>Panel:</p>
 <ul>
+<li><a href="https://github.com/karrak1/PHP-Fusion_Addons/tree/master/pm_control">PM Kontroll</a></li>
 <li><a href="https://github.com/karrak1/PHP-Fusion_Addons/tree/master/welcome_pm_panel">Üdvözlő PM Üzenet</a></li>
 </ul>
 
