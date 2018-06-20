@@ -48,9 +48,6 @@ $inf_newtable[] = DB_WELCOME_PM." (
     wp_id          TINYINT(1)    UNSIGNED NOT NULL AUTO_INCREMENT,
     wp_active      ENUM('0','1')                   DEFAULT '0',
     wp_sbox        ENUM('0','1')                   DEFAULT '0',
-    wp_subject     VARCHAR(255)           NOT NULL DEFAULT '',
-    wp_messages    TEXT,
-    wp_sb_messages TEXT,
     wp_language    VARCHAR(50)            NOT NULL DEFAULT '".LANGUAGE."',
 PRIMARY KEY (wp_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=UTF8 COLLATE=utf8_unicode_ci";
@@ -65,12 +62,12 @@ $enabled_languages = makefilelist(LOCALE, ".|..", TRUE, "folders");
 if (!empty($enabled_languages)) {
     foreach($enabled_languages as $language) {
         $locale = fusion_get_locale("", INFUSIONS.$inf_folder."/locale/".$language.".php");
-		$mlt_insertdbrow[$language][] = DB_WELCOME_PM." (wp_active, wp_sbox, wp_subject, wp_messages, wp_sb_messages, wp_language) VALUES ('0', '0', '".$locale['WPM_005']."', '".$locale['WPM_006']."', '".$locale['WPM_007']."', '".$language."')";
+		$mlt_insertdbrow[$language][] = DB_WELCOME_PM." (wp_active, wp_sbox, wp_subject, wp_messages, wp_sb_messages, wp_language) VALUES ('0', '0', '".$language."')";
 
 		$mlt_deldbrow[$language][] = DB_WELCOME_PM." WHERE wp_language='".$language."'";
     }
 } else {
-	$inf_insertdbrow[] = DB_WELCOME_PM." (wp_active, wp_sbox, wp_subject, wp_messages, wp_sb_messages, wp_language) VALUES ('0', '0', '".$locale['WPM_005']."', '".$locale['WPM_006']."', '".$locale['WPM_007']."', '".LANGUAGE."')";
+	$inf_insertdbrow[] = DB_WELCOME_PM." (wp_active, wp_sbox, wp_subject, wp_messages, wp_sb_messages, wp_language) VALUES ('0', '0', '".LANGUAGE."')";
 }
 
 $inf_dropcol[] = ['table' => DB_USERS, 'column' => 'user_welcome'];

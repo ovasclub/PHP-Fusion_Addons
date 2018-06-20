@@ -29,15 +29,15 @@ if (iMEMBER) {
         if ($wpsettings['wp_active'] == 1 && fusion_get_userdata('user_welcome') == 0) {
 
 		    $sender_user_id = 1;
-		    $subject = $wpsettings['wp_subject'];
-		    $message = $wpsettings['wp_messages'];
+		    $subject = $locale['WPM_005'];
+		    $message = $locale['WPM_006'];
 		    send_pm(fusion_get_userdata('user_id'), $sender_user_id, $subject, $message);
 
         if ($wpsettings['wp_sbox'] == 1) {
              $message = str_replace(
                  ["[USERNAME]"],
                  [fusion_get_userdata('user_name')],
-                 $locale['wel001e']
+                 $locale['WPM_007']
              );
 
             dbquery("INSERT INTO ".DB_SHOUTBOX." (shout_name, shout_message, shout_datestamp, shout_language) VALUES ('Admin', '".$message."', '".time()."', '".LANGUAGE."')");
