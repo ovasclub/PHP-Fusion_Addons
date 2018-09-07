@@ -61,13 +61,17 @@ function saveAvatar() {
                           }
                         // --></script>";
                 $output .= "</div>\n";
-            } else {                $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_015']."</div>\n";
+            } else {
+
+                $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_015']."</div>\n";
             }
 
         } else {
             $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_013']."</div>\n";
         }
-    } else {        $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_012']."</div>\n";
-    }
+    } else {
+        $output .= "<div class='bg-danger text-center m-b-20'>".$locale['ast_012']."</div>\n";
+
+    }
     return $output;
 }

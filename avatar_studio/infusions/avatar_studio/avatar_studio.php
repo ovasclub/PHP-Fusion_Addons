@@ -28,7 +28,9 @@ include_once INFUSIONS."avatar_studio/include/avatar_functions.php";
 
 opentable($locale['ast_001']);
 
-if(isset($_POST['avatar_save'])) {    echo SaveAvatar();
+if(isset($_POST['avatar_save'])) {
+
+    echo SaveAvatar();
 } else {
 
 $formSettings = [
